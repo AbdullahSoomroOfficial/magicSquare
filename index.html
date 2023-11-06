@@ -3,9 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic Square</title>
-    <link rel="stylesheet" href="index.css" />
-    <script defer src="index.js"></script>
+    <title>Magic Square Generator</title>
+    <link rel="stylesheet" href="/style.css" />
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <h1>Magic Square Generator</h1>
+      <button id="showPopupButton">Generate Magic Square</button>
+
+      <!-- Popup for user input -->
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <span class="close" id="closePopupButton">&times;</span>
+          <label for="order">Enter the order (odd number): </label>
+          <input type="number" id="order" min="3" step="2" required />
+          <button id="generateMagicSquareButton">Generate</button>
+        </div>
+      </div>
+
+      <!-- Display the magic square -->
+      <div id="magicSquare" class="magic-square"></div>
+    </div>
+
+    <script type="module" src="generateMagicSquare.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
